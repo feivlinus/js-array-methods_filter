@@ -41,7 +41,7 @@ const allCardsWith3Tags = cards.filter((card) => {
 
 //Task 3
 const allCardsThatAreNotBookmarked = cards.filter((card) => {
-  return card.isBookmarked === false;
+  return !card.isBookmarked;
 });
 
 // allCardsThatAreNotBookmarked.forEach((element) => {
@@ -51,7 +51,7 @@ const allCardsThatAreNotBookmarked = cards.filter((card) => {
 //Task 4
 const allCardsWithTagsHTMLOrJSThatAreBookmarked = cards.filter((card) => {
   return (
-    card.isBookmarked === true &&
+    card.isBookmarked &&
     (card.tags.includes("js") || card.tags.includes("html"))
   );
 });
